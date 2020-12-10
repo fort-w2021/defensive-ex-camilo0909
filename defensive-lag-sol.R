@@ -3,12 +3,15 @@ library(checklist)
 library(testthat)
 
 
+
 lag <- function(x, n = 1L) {
   checkmate::assert_atomic_vector(x)
   checkmate::assert_int(n, lower = 0, upper = length(x))
   xlen <- length(x)
   c(rep(NA, n), x[seq_len(xlen - n)])
 }
+
+
 
 # test input parameters
 test_vec <- c(1, 2, 3, 4)
