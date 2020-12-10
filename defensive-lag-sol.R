@@ -10,7 +10,6 @@ lag <- function(x, n = 1L) {
   c(rep(NA, n), x[seq_len(xlen - n)])
 }
 
-
 # test input parameters
 test_vec <- c(1, 2, 3, 4)
 test_matrix <- matrix(1:4, ncol = 2)
